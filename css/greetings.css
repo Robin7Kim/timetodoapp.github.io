@@ -1,0 +1,63 @@
+.loginForm {
+    z-index: 1;
+}
+
+.loginForm input {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    text-align: center;
+    width: 215px;
+}
+.loginForm input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+.loginForm input:active, 
+.loginForm input:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+    transition: border-bottom 0.2s ease-in-out;
+}
+.loginForm [type="submit"]{
+    display: none;
+}
+
+.greeting_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.greeting_wrap div{
+    min-width: 80px;
+}
+.greeting {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.logout_wrap {
+    margin-top:10px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+.logout {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.logout:hover {
+    color: white;
+    cursor: pointer;
+}
+.opacity0 {
+    opacity : 0;
+}

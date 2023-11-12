@@ -1,0 +1,149 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    padding-bottom: 15px;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+.backgroundSource {
+    width: 15%;
+    min-width:100px;
+}
+
+.todo {
+    width: 15%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 15px;
+    align-items: center; /* 중앙 정렬 */
+}
+
+.todo__btn {
+    padding-right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.todo__btn:hover {
+    cursor:pointer;
+    color:white;
+    transition: color 0.2s ease-in-out;
+}
+
+@keyframes fade_in {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+@keyframes fade_out {
+    from {
+    opacity: 1;
+    }
+    to {
+    opacity: 0;
+    }
+}
+
+.todoBox {
+    position: absolute;
+    bottom: 60px;
+    left: 50%; /* 가로 방향 중앙 정렬 */
+    transform: translateX(-50%); /* X축 기준 중앙 정렬 보정 */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-sizing: border-box;
+    animation: fade_in 0.5s;
+    width: auto;
+    max-width: 100%; /* 박스의 최대 너비를 부모 요소의 너비로 제한 */
+    height: auto; /* 박스의 높이를 내용에 따라 자동 조정 */
+    max-height: 500px; /* 박스의 최대 높이를 500픽셀로 제한 */
+}
+
+.todoBoxHidden {
+    animation: fade_out 0.5s forwards;
+    pointer-events: none;  /* 포인터를 사용 못하게 만듬 */
+}
+
+.todoBox__subject {
+    color: rgb(25, 25, 25);
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.todoBox__startMessage {
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+}
+
+.todoBox__wraper {
+    width: 300px;
+    overflow-y: scroll;
+    transition: height 0.2s ease-in-out;
+}
+
+.todoBox__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.todoList li {
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    color: #222;
+    padding: 2px;
+}
+
+.todoList li span:last-child {
+    padding-left: 3px;
+}
+
+.todoList li button {
+    padding: 0;
+    width: 20px;
+    background: none;
+    border: none;
+}
+.todoList li button:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.todoForm input {
+    bottom: 0;
+    font-size: 1.0rem;
+    background: none;
+    border: none;
+    color: #555;
+    outline: none;
+    border-bottom: 2px solid rgba(13, 230, 45, 0);
+    width: 250px;
+}
+.todoForm input::placeholder {
+    color: rgba(190, 21, 21, 0.35);
+}
+.todoForm input:active, 
+.todoForm input:focus {
+    outline: none;
+    transition: border-bottom 0.2s ease-in-out;
+}
+.todoForm [type="submit"]{
+    display: none;
+}

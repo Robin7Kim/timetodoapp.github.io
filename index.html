@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MyFristApp</title>
+  </head>
+  <body>
+    <main>
+      <div class="date"></div>
+      <div class="clock"></div>
+      <div class="background2"></div>      
+      <form class="loginForm hidden">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <input type="submit" value="Log In" />
+      </form>
+      <div class="greeting_wrap hidden">
+        <div></div>
+        <h1 class="greeting"></h1>
+        <div class="logout_wrap opacity0"> 
+          <i class="fa-solid fa-right-from-bracket logout"></i>
+        </div>
+      </div>
+      <div class="weather">
+        <div id="weather"></div>   
+        <div id="city"></div>   
+      </div>      
+    </main>
+    <footer> 
+      <div class="backgroundSource"></div>
+      <div class="todo">
+        <span class="todo__btn"> Todo </span>
+        <div class="todoBox hidden">
+          <div class="todoBox__subject">Todo list or anything</div>
+          <div class="todoBox__wraper">
+            <span class="todoBox__startMessage"></span>
+            <div class="todoBox__list">
+              <ul class="todoList"></ul>
+            </div>
+          </div>
+          <form class="todoForm">
+            <input type="text" required placeholder="Click Me!" />
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/clock.js"></script>     
+    <script src="js/greetings.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7489903411.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

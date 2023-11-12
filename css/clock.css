@@ -1,0 +1,14 @@
+.clock {
+    font-size: 11em;
+    font-weight: bold;
+    color: #f48fb1;
+    z-index: 1;
+}
+
+.date {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0fc424;
+    z-index: 1;
+}
+
